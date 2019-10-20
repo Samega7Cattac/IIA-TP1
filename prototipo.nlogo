@@ -105,7 +105,7 @@ to go-limpadores
       ask one-of patches with [pcolor = neutral] [set pcolor coloralim]
     ]
     [pcolor] of patch-right-and-ahead 90 1 = colortox or [pcolor] of patch-right-and-ahead 90 1 = colornor or [pcolor] of patch-right-and-ahead 90 1 = coloralim [rt 90]
-    [ifelse random 101 > pturn [fd 1][rt 90]])
+    [ifelse random 101 < pturn [rt 90][fd 1]])
   ]
   [
     (ifelse [pcolor] of patch-ahead 1 = colordep
@@ -116,7 +116,7 @@ to go-limpadores
       set trans 0
     ]
     [pcolor] of patch-right-and-ahead 90 1 = colordep [rt 90]
-    [ifelse random 101 > pturn [fd 1][rt 90]])
+    [ifelse random 101 < pturn [rt 90][fd 1]])
   ])
 end
 
@@ -161,7 +161,7 @@ to go-comiloes
   ]
   [pcolor] of patch-right-and-ahead 90 1 = coloralim [rt 90]
   [pcolor] of patch-left-and-ahead 90 1 = coloralim [lt 90]
-  [ifelse random 101 > pturn [fd 1][rt 90]])
+  [ifelse random 101 < pturn [rt 90][fd 1]])
 end
 @#$#@#$#@
 GRAPHICS-WINDOW
