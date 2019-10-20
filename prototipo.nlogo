@@ -254,10 +254,10 @@ plixonor
 HORIZONTAL
 
 TEXTBOX
-83
-112
-140
-130
+84
+97
+141
+115
 alimento\n
 12
 0.0
@@ -316,9 +316,9 @@ TEXTBOX
 
 TEXTBOX
 9
-93
+112
 114
-111
+130
 % de existencia\n
 12
 0.0
@@ -326,9 +326,9 @@ TEXTBOX
 
 TEXTBOX
 124
-93
+112
 274
-111
+130
 energia
 12
 0.0
