@@ -253,7 +253,7 @@ ndepositos
 ndepositos
 0
 10
-9.0
+10.0
 1
 1
 NIL
@@ -268,7 +268,7 @@ ealim
 ealim
 1
 50
-38.0
+50.0
 1
 1
 NIL
@@ -377,21 +377,21 @@ limite de residuos
 1
 
 TEXTBOX
-115
-428
-242
-446
-numero de  comiloes
+139
+415
+225
+433
+n de  comiloes
 12
 0.0
 1
 
 TEXTBOX
-0
-416
-147
-434
-numero de limpadores
+13
+414
+114
+432
+n de limpadores
 12
 0.0
 1
@@ -448,10 +448,10 @@ limresi
 Number
 
 INPUTBOX
-136
-447
-228
-507
+137
+431
+229
+491
 ncomiloes
 420.0
 1
@@ -813,6 +813,53 @@ NetLogo 6.1.1
 @#$#@#$#@
 @#$#@#$#@
 @#$#@#$#@
+<experiments>
+  <experiment name="experiment" repetitions="10" runMetricsEveryStep="true">
+    <setup>setup</setup>
+    <go>go</go>
+    <metric>count limpadores</metric>
+    <metric>count comiloes</metric>
+    <enumeratedValueSet variable="ealim">
+      <value value="50"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="nlimpadores">
+      <value value="0"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="palim">
+      <value value="15"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="nenergy">
+      <value value="50"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="ndepositos">
+      <value value="10"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="limresi">
+      <value value="30"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="pturn">
+      <value value="0"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="invertcolors">
+      <value value="false"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="limittick">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="plixonor">
+      <value value="0"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="plixotox">
+      <value value="1"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="ncomiloes">
+      <value value="420"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="ticklimit">
+      <value value="1000"/>
+    </enumeratedValueSet>
+  </experiment>
+</experiments>
 @#$#@#$#@
 @#$#@#$#@
 default
