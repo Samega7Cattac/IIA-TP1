@@ -70,7 +70,7 @@ to setup-turtles
 end
 
 to go
-  if not any? turtles [stop]
+  ifelse limittick = false [if not any? turtles [stop]][if not any? turtles or ticks >= ticklimit [stop]]
   ask limpadores [go-limpadores]
   ask comiloes [go-comiloes]
   ask turtles [set energy energy - 1]
@@ -165,9 +165,9 @@ to go-comiloes
 end
 @#$#@#$#@
 GRAPHICS-WINDOW
-231
+248
 10
-724
+741
 504
 -1
 -1
@@ -209,45 +209,15 @@ NIL
 1
 
 SLIDER
-116
-183
-222
-216
-plixotox
-plixotox
-5
-20
-8.0
-1
-1
-%
-HORIZONTAL
-
-SLIDER
 3
-126
+165
 109
-159
+198
 palim
 palim
-0
-15
-15.0
-1
-1
-%
-HORIZONTAL
-
-SLIDER
-3
-183
-108
-216
-plixonor
-plixonor
 5
 20
-11.0
+15.0
 1
 1
 %
@@ -255,19 +225,19 @@ HORIZONTAL
 
 TEXTBOX
 84
-97
+130
 141
-115
+148
 alimento\n
 12
 0.0
 1
 
 SWITCH
-39
-53
-163
-86
+0
+96
+124
+129
 invertcolors
 invertcolors
 1
@@ -275,10 +245,10 @@ invertcolors
 -1000
 
 SLIDER
-6
-246
-108
-279
+7
+294
+109
+327
 ndepositos
 ndepositos
 0
@@ -291,14 +261,14 @@ HORIZONTAL
 
 SLIDER
 112
-126
+165
 221
-159
+198
 ealim
 ealim
-0
-100
-10.0
+1
+50
+38.0
 1
 1
 NIL
@@ -306,9 +276,9 @@ HORIZONTAL
 
 TEXTBOX
 117
-165
+204
 216
-197
+222
 % lixo toxico
 12
 0.0
@@ -316,9 +286,9 @@ TEXTBOX
 
 TEXTBOX
 9
-112
+145
 114
-130
+163
 % de existencia\n
 12
 0.0
@@ -326,9 +296,9 @@ TEXTBOX
 
 TEXTBOX
 124
-112
+145
 274
-130
+163
 energia
 12
 0.0
@@ -336,73 +306,13 @@ energia
 
 TEXTBOX
 9
-165
+204
 101
-197
+222
 % lixo normal
 12
 0.0
 1
-
-SLIDER
-24
-360
-196
-393
-ncomiloes
-ncomiloes
-0
-100
-21.0
-1
-1
-NIL
-HORIZONTAL
-
-SLIDER
-23
-414
-195
-447
-nlimpadores
-nlimpadores
-0
-100
-21.0
-1
-1
-NIL
-HORIZONTAL
-
-SLIDER
-21
-469
-193
-502
-nenergy
-nenergy
-1
-50
-50.0
-1
-1
-NIL
-HORIZONTAL
-
-SLIDER
-23
-305
-195
-338
-limresi
-limresi
-0
-100
-10.0
-1
-1
-NIL
-HORIZONTAL
 
 BUTTON
 120
@@ -423,24 +333,24 @@ NIL
 
 TEXTBOX
 21
-227
+266
 103
-259
+284
 n depositos
 12
 0.0
 1
 
 SLIDER
-115
-246
-224
-279
+114
+292
+223
+325
 pturn
 pturn
 0
 50
-15.0
+0.0
 1
 1
 NIL
@@ -448,53 +358,149 @@ HORIZONTAL
 
 TEXTBOX
 120
-225
-270
-243
+264
+182
+282
 % de virar
 12
 0.0
 1
 
 TEXTBOX
-56
-287
-171
-305
+0
+330
+115
+348
 limite de residuos
 12
 0.0
 1
 
 TEXTBOX
-47
-344
-193
-392
+121
+331
+248
+349
 numero de  comiloes
 12
 0.0
 1
 
 TEXTBOX
-39
-399
-186
-431
+0
+416
+147
+434
 numero de limpadores
 12
 0.0
 1
 
 TEXTBOX
-67
-454
-157
-486
+150
+413
+240
+431
 energia inicial
 12
 0.0
 1
+
+SLIDER
+0
+227
+101
+260
+plixotox
+plixotox
+0
+15
+1.0
+1
+1
+%
+HORIZONTAL
+
+SLIDER
+102
+227
+223
+260
+plixonor
+plixonor
+0
+15
+0.0
+1
+1
+%
+HORIZONTAL
+
+INPUTBOX
+16
+353
+99
+413
+limresi
+30.0
+1
+0
+Number
+
+INPUTBOX
+142
+350
+234
+410
+ncomiloes
+420.0
+1
+0
+Number
+
+INPUTBOX
+14
+432
+105
+492
+nlimpadores
+0.0
+1
+0
+Number
+
+INPUTBOX
+141
+432
+227
+492
+nenergy
+50.0
+1
+0
+Number
+
+INPUTBOX
+130
+64
+235
+124
+ticklimit
+10.0
+1
+0
+Number
+
+SWITCH
+0
+59
+108
+92
+limittick
+limittick
+0
+1
+-1000
 
 @#$#@#$#@
 @#$#@#$#@
