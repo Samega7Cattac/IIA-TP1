@@ -144,12 +144,12 @@ to go-comiloes
   ]
   [pcolor] of patch-ahead 1 = colortox
   [
-    rt 90
+    ifelse random 101 > 50 [lt 90] [rt 90]
     set energy energy - (energy * 0.1)
   ]
   [pcolor] of patch-ahead 1 = colornor
   [
-    rt 90
+    ifelse random 101 > 50 [lt 90] [rt 90]
     set energy energy - (energy * 0.05)
   ]
   [pcolor] of patch-ahead 1 = coloralim
@@ -377,10 +377,10 @@ limite de residuos
 1
 
 TEXTBOX
-121
-331
-248
-349
+115
+428
+242
+446
 numero de  comiloes
 12
 0.0
@@ -397,10 +397,10 @@ numero de limpadores
 1
 
 TEXTBOX
-150
-413
-240
-431
+143
+332
+233
+350
 energia inicial
 12
 0.0
@@ -448,10 +448,10 @@ limresi
 Number
 
 INPUTBOX
-142
-350
-234
-410
+136
+447
+228
+507
 ncomiloes
 420.0
 1
@@ -470,10 +470,10 @@ nlimpadores
 Number
 
 INPUTBOX
-141
-432
-227
-492
+134
+351
+220
+411
 nenergy
 50.0
 1
@@ -486,7 +486,7 @@ INPUTBOX
 235
 124
 ticklimit
-10.0
+1000.0
 1
 0
 Number
