@@ -86,14 +86,14 @@ to go-limpadores
       fd 1
       set trans trans + 2
       set pcolor neutral
-      ask patches with [pxcor = random-pxcor and pycor = random-pycor] [set pcolor colortox]
+      ask one-of patches with [pcolor = neutral] [set pcolor colortox]
     ]
     [pcolor] of patch-ahead 1 = colornor
     [
       fd 1
       set trans trans + 1
       set pcolor neutral
-      ask patches with [pxcor = random-pxcor and pycor = random-pycor] [set pcolor colornor]
+      ask one-of patches with [pcolor = neutral] [set pcolor colornor]
     ]
     [pcolor] of patch-ahead 1 = coloralim
     [
@@ -102,7 +102,7 @@ to go-limpadores
       [set energy energy + ealim]
       [set energy energy + (ealim / 2)]
       set pcolor neutral
-      ask patches with [pxcor = random-pxcor and pycor = random-pycor] [set pcolor coloralim]
+      ask one-of patches with [pcolor = neutral] [set pcolor coloralim]
     ]
     [pcolor] of patch-right-and-ahead 90 1 = colortox or [pcolor] of patch-right-and-ahead 90 1 = colornor or [pcolor] of patch-right-and-ahead 90 1 = coloralim [rt 90]
     [ifelse random 101 > pturn [fd 1][rt 90]])
@@ -157,7 +157,7 @@ to go-comiloes
     fd 1
     set energy energy + ealim
     set pcolor neutral
-    ask patches with [pxcor = random-pxcor and pycor = random-pycor and pcolor = neutral] [set pcolor coloralim]
+    ask one-of patches with [pcolor = neutral] [set pcolor coloralim]
   ]
   [pcolor] of patch-right-and-ahead 90 1 = coloralim [rt 90]
   [pcolor] of patch-left-and-ahead 90 1 = coloralim [lt 90]
